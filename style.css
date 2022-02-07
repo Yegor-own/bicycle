@@ -68,6 +68,14 @@ body {
 
 
 @media (max-width:  425px) {
+  body.lock {
+    overflow: hidden;
+  }
+
+  .header__body {
+    background: url('img/header_bg.jpg') 45% 0/cover no-repeat;
+  }
+
   .header__nav {
     margin: 0;
     width: 100%
@@ -75,11 +83,12 @@ body {
 
   .nav__burger {
     display: block;
-    position: relative;
+    position: fixed;
     height: 30px;
     width: 40px;
     top: 20px;
-    margin: 0 20px 0 auto;
+    /* margin: 0 20px 0 auto; */
+    right: 20px;
   }
   .nav__burger:before,
   .nav__burger:after,
@@ -150,5 +159,65 @@ body {
   }
   .nav__burger.active span {
     display: none
+  }
+}
+
+
+.content {}
+
+.about-us {
+  max-width: 1100px;
+  margin: 110px auto 140px auto;
+}
+
+.about-us__body {
+  padding: 0 10px;
+}
+
+.about-us__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-us__title {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-family: "Lato";
+  color: rgb(53, 55, 56);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.about-us__subtitle {
+  font-size: 18px;
+  font-family: "Lato";
+  color: rgb(132, 135, 137);
+  line-height: 1.889;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .about-us {
+    margin: 55px auto 70px auto;
+  }
+  .about-us__body {
+    padding: 0 20px;
+  }
+  .about-us__title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width:  425px) {
+  .about-us {
+    margin: 40px auto 40px auto;
+  }
+  .about-us__title {
+    font-size: 18px;
   }
 }
