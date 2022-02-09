@@ -239,13 +239,15 @@ body {
 }
 
 .work__item {
-  height: 600px;
+  height: 700px;
   display: flex;
+  position: relative;
 }
 
 .item__bg {
   height: 100%;
   display: flex;
+  min-width: 50%;
   flex: 1 0 auto;
   align-items: center;
   justify-content: center;
@@ -263,20 +265,23 @@ body {
 }
 
 .item__content {
-  max-width: 530px;
+  /*max-width: 530px;*/
   display: flex;
-  flex: 1 1 530px;
+  flex: 1 1 auto;
   flex-direction: column;
   align-items: center;
   height: 100%;
+  /*position: relative;*/
 }
 
 .item__content_sm {
   width: 30%;
+  flex: 0 0 auto;
+  height: 100%;
 }
 
 .item__image {
-  margin-top: 70px;
+  margin-top: 30px;
   margin-bottom: 25px;
 }
 
@@ -288,11 +293,11 @@ body {
   text-transform: uppercase;
   line-height: 1.2;
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 
 .item__subtitle {
-  font-size: 16px;
+  font-size: 18px;
   font-family: "Lato";
   color: rgb(132, 135, 137);
   line-height: 1.875;
@@ -300,14 +305,45 @@ body {
   max-width: 400px;
   margin: 0 auto;
   flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item__subtitle_sm {
+  padding: 0 20px;
+}
+
+.item__subtitle span {
+  margin-top: 20px;
+  /*margin-bottom: 40px;*/
+  height: 2px;
+  width: 50px;
+  background: #D7D7D7;
 }
 
 .item__preview {
   width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
+
 
 .item__preview img {
   width: 100%;
+  position: relative;
+  z-index: 1;
+  display: block;
+}
+
+.item__preview:after {
+  content: '';
+  border: 20px solid transparent; border-top: 20px solid white;
+  position: absolute;
+  top: 0;
+  z-index: 2;
 }
 
 .bg_1 {
@@ -388,7 +424,7 @@ body {
 @media (max-width:  425px) {
   .item__content {
     padding: 0 20px;
-    margin-bottom: 0;
+    margin-bottom: 20px;
     height: auto;
   }
   .item__bg {
@@ -397,5 +433,99 @@ body {
 
   .item__bg_sm {
     height: 400px;
+  }
+
+  .item__preview:after {
+    border: 15px solid transparent; border-top: 15px solid white;
+  }
+}
+
+
+.twitter {}
+
+.twitter__body {
+  max-width: 1030px;
+  margin: 120px auto 60px auto;
+}
+
+.twitter__logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 34px;
+}
+
+.twitter__tabs {}
+
+.twitter__tab {
+  display: none;
+}
+
+/*.twitter__tab.active_tab {
+  display: block;
+}*/
+
+.tab__title {
+  font-size: 18px;
+  font-family: "Lato";
+  color: rgb(53, 55, 56);
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.tab__title span {
+  font-size: 15px;
+  color: rgb(132, 135, 137);
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+
+.tab__subtitle {
+  font-size: 24px;
+  font-family: "Lato";
+  color: rgb(132, 135, 137);
+  font-style: italic;
+  line-height: 1.417;
+  text-align: center;
+}
+
+.tabs__actions {
+  max-width: 70px;
+  margin: 100px auto 0 auto;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.actions__item {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: 1px solid #A9AFB3;
+  margin-right: 5px;
+}
+
+.actions__item.active_tab {
+  background: #A9AFB3;
+}
+
+
+@media (max-width: 768px) {
+  .twitter__body {
+    margin: 60px auto 30px auto;
+  }
+  .tab__subtitle {
+    font-size: 18px;
+    padding: 0 20px;
+  }
+  .tabs__actions {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width:  425px) {
+  .twitter__body {
+    margin: 30px auto 30px auto;
   }
 }
