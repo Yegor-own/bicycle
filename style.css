@@ -643,3 +643,98 @@ body {
     /* height: 600px; */
   }
 }
+
+
+.mailing {
+}
+.mailing__body {
+  width: 530px;
+  margin: 30px auto 100px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.mailing__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mailing__logo img {
+  margin-bottom: 30px;
+}
+
+.mailing__logo img:first-child {
+  width: 50px;
+}
+
+.mailing__title {
+  font-size: 24px;
+  font-family: "Lato";
+  color: rgb(132, 135, 137);
+  font-style: italic;
+  line-height: 1.417;
+  text-align: center;
+  margin-bottom: 35px;
+}
+.mailing__form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.mailing__input {
+  flex: 1 1 400px;
+  margin-right: 5px;
+  border: 2px solid #D3D7D9;
+  font-size: 20px;
+  font-family: "Lato";
+  color: rgba(146, 146, 146, 0.502);
+  font-style: italic;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.mailing__input::placeholder {
+  padding: 30px;
+  font-size: 20px;
+  font-family: "Lato";
+  color: rgba(146, 146, 146, 0.502);
+  font-style: italic;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.mailing__submit {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-family: "Lato";
+  color: rgb(255, 255, 255);
+  line-height: 1;
+  text-align: center;
+  background: #64C29E;
+  padding: 30px 50px;
+}
+
+.mailing__submit:hover {
+  background: #6cd1aa;
+}
+
+@media (max-width:  425px) {
+  .mailing__body {
+    width: 100%;
+  }
+  .mailing__input {
+    flex: 0 1 auto;
+  }
+  .mailing__submit {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-family: "Lato";
+    color: rgb(255, 255, 255);
+    line-height: 1;
+    text-align: center;
+    background: #64C29E;
+    padding: 10px 20px;
+  }
+}
