@@ -79,6 +79,8 @@ body {
 
   .header__body {
     background: url('img/header_bg.jpg') 45% 0/cover no-repeat;
+    position: relative;
+    z-index: 5;
   }
 
   .header__nav {
@@ -247,8 +249,8 @@ body {
 .item__bg {
   height: 100%;
   display: flex;
-  min-width: 50%;
-  flex: 1 0 auto;
+  /*max-width: 70%;*/
+  flex: 1 1 60%;
   align-items: center;
   justify-content: center;
 }
@@ -370,8 +372,8 @@ body {
     flex-direction: column;
   }
   .item__bg {
-    height: 530px;
     display: flex;
+    flex: 1 1 530px;
     align-items: center;
     justify-content: center;
     order: 1;
@@ -527,5 +529,117 @@ body {
 @media (max-width:  425px) {
   .twitter__body {
     margin: 30px auto 30px auto;
+  }
+}
+
+.shop {
+}
+.shop__body {
+  display: flex;
+}
+.shop__column {
+  width: 33.333%;
+}
+.shop__column_b {
+}
+.column__row {
+  display: flex;
+}
+.row__col {
+  width: 50%;
+}
+
+.shop__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+}
+
+.shop__item:hover .shop__preview {
+  visibility: visible;
+  transition: 0.5s;
+  background-color: rgba(100, 194, 158, 0.8);
+}
+
+.shop__preview {
+  transition: 0.01s;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: none;
+}
+
+.shop__preview span {
+  font-size: 14px;
+  font-family: "Lato";
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.shop__image {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.shop__image img {
+  width: 100%;
+  height: 100%;
+}
+
+.shop__column_s {
+  display: flex;
+}
+
+.shop__footer {
+  height: 200px;
+  background: #282F35;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shop__button {
+  font-size: 14px;
+  font-family: "Lato";
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
+  padding: 20px 60px 20px 60px;
+  border: 2px solid #999C9F;
+  transition: 0.3s;
+}
+
+.shop__button:hover {
+  transition: 0.3s;
+  color: #000;
+  background: #fff;
+  border: 2px solid #fff;
+}
+
+
+@media (max-width: 768px) {
+  .shop__body {
+    display: block;
+  }
+  .shop__column {
+    width: 100%;
+    /* height: 600px; */
   }
 }
